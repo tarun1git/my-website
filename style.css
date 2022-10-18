@@ -51,7 +51,11 @@ button:hover {
     background: transparent;
 }
 
-button,#sideMenu,#closeMenu {
+button,
+#sideMenu,
+#closeMenu,
+.service,
+.social-icons .fa {
     cursor: pointer;
 }
 
@@ -80,7 +84,8 @@ button,#sideMenu,#closeMenu {
 
 .logo,
 .navbar #list,
-.navbar #list li a,.row {
+.navbar #list li a,
+.row {
     display: flex;
     align-items: center;
 }
@@ -112,26 +117,33 @@ button,#sideMenu,#closeMenu {
     margin-right: 10px;
     font-size: 20px;
 }
-#sideMenu,#closeMenu{
+
+#sideMenu,
+#closeMenu {
     position: absolute;
     top: 15px;
     display: none;
 }
-#sideMenu{
+
+#sideMenu {
     width: 22px;
     right: 50px;
 }
-#closeMenu{
+
+#closeMenu {
     width: 35px;
     left: 15px;
     z-index: 10;
 }
-#about{
+
+#about,
+#service,
+#contact {
     width: 100%;
     padding: 100px 0;
 }
 
-.title{
+.title {
     width: fit-content;
     color: #f44336;
     text-align: center;
@@ -140,7 +152,8 @@ button,#sideMenu,#closeMenu {
     border-bottom: 2px solid #f44336;
     position: relative;
 }
-.title::after{
+
+.title::after {
     content: '';
     width: 40px;
     height: 8px;
@@ -151,36 +164,143 @@ button,#sideMenu,#closeMenu {
     transform: translateX(-50%);
     border-radius: 20px;
 }
-.row{
+
+.row {
     width: 85%;
     margin: auto;
     flex-wrap: wrap;
-     justify-content: space-between;
+    justify-content: space-between;
 }
-.col-left,.col-right{
+
+.col-left,
+.col-right {
     flex-basis: 50%;
 }
-.content-image{
+
+.content-image {
     text-align: center;
 }
-.content-image img{
+
+.content-image img {
     width: 90%;
 }
-.content{
+
+.content {
     margin-right: 50px;
 }
-h3{
+
+h3 {
     color: red;
     margin-bottom: 30px;
 }
-.content h3{
+
+.content h3 {
     font-size: 30px;
 }
-p{
+
+p {
     font-size: 12px;
     line-height: 18px;
 }
 
+#services,
+#contact {
+    background: #f7f7f7;
+}
+
+.col {
+    flex-basis: 30%;
+}
+
+.service {
+    border-radius: 5px;
+    padding: 20px 10px;
+    box-shadow: 10px 10px 20px 0px rgba(255, 4, 4, 0.1);
+}
+
+.service .fa {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: #f44336;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.location {
+    width: fit-content;
+    margin: auto;
+}
+
+.address-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.address-line .fa,
+.social-icons .fa {
+    color: #f44336;
+    margin-right: 15px;
+}
+
+.social-icons {
+    margin-top: 30px;
+    text-align: initial;
+}
+
+.social-icons .fa {
+    font-size: 22px;
+}
+.contact-form{
+    width: 80%;
+    margin: auto;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 7px 10px;
+    outline: none;
+    border: 1px solid #f44336;
+    margin-bottom: 15px;
+    background: transparent;
+}
+.input-group{
+    display: flex;
+    justify-content: space-between;
+}
+.input-group input{
+    flex-basis: 43%;
+}
+form button{
+    margin: 0;
+    border-radius: 0;
+    font-weight: 100;
+    border: 1px solid #f44336;
+}
+form button:hover{
+    color: #757575 !important;
+}
+.copyright{
+    padding: 15px 0 15px;
+    text-align: center;
+    background: #f44336;
+    color: #fff;
+    margin-top: 50px;
+}
+.copyright .fa{
+    font-size: 15px;
+    color: #fff;
+}
+#contact{
+    padding-bottom: 0;
+}
 
 
 
@@ -191,11 +311,17 @@ p{
 
 
 
-@media only screen and (max-width:700px){
-    #sideMenu,#closeMenu{
+
+
+
+@media only screen and (max-width:700px) {
+
+    #sideMenu,
+    #closeMenu {
         display: block;
     }
-    .navbar #list{
+
+    .navbar #list {
         width: 50%;
         height: 100vh;
         position: fixed;
@@ -208,21 +334,33 @@ p{
         visibility: hidden;
         transition: 0.5s;
     }
-    .navbar #list li{
+
+    .navbar #list li {
         margin-left: -5px;
         margin-top: 30px;
     }
+
     .banner-text h1 {
         font-size: 25px;
         line-height: 35px;
     }
-    .col-left,.col-right{
+
+    .col-left,
+    .col-right,
+    .col {
         flex-basis: 100%;
         text-align: center;
     }
-    .content{
+
+    .content {
         margin-right: 0px;
         margin-bottom: 50px;
     }
-}
 
+    .col:nth-child(2) {
+        margin: 40px 0;
+    }
+    .contact-form{
+        margin-top: 50px;
+    }
+}
