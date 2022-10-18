@@ -9,3 +9,5 @@ display.onclick = function(){
 hidden.onclick = function(){
     list.style.right = "-50%";
 }
+
+var scroll = new SmoothScroll('a[href*="#"]');
